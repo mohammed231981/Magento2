@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sandbox_post" resource="default" engine="innodb" comment="Sandbox Post Table">
+        <column xsi:type="smallint" name="entity_id" padding="6" unsigned="false" nullable="false" identity="true"
+                comment="Entity Id"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="varchar" name="description" nullable="false" length="255" comment="Description"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

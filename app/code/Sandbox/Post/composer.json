@@ -1,0 +1,28 @@
+{
+    "name": "sandbox/post",
+    "description": "Post",
+    "license": "GPL-3.0",
+    "type": "magento2-module",
+    "homepage": "http://localhost/",
+    "keywords":[ "composer-installer", "magento", "Magento 2 Module", "Post", "Magento 2", "Sandbox"],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "require": {
+        "php":  ">7.4",
+        "magento/framework": "^102.0.2"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Sandbox\\Post\\": "./"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

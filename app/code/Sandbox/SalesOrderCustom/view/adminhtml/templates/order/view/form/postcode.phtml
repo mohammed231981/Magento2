@@ -1,0 +1,13 @@
+<?php
+use Magento\Framework\Phrase;
+$postcode = $block->getPostcode();
+?>
+    <section class="admin__page-section">
+        <div class="admin__page-section-title">
+            <span class="title"><?php /* @escapeNotVerified */ echo new Phrase('Postcode Custom') ?></span>
+        </div>
+        <div class="admin__page-section-content">
+            <?php echo $postcode;?>
+        </div>
+    </section>
+

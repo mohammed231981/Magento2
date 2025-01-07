@@ -1,0 +1,21 @@
+<?php
+$product = $block->getProduct();
+$orderProductQuickly = $product->getData('order_product_quickly');
+$blockTitle = $this->getData('title');
+
+$stockData = $product->getQuantityAndStockStatus();
+
+if (
+    null !== $orderProductQuickly
+    && isset($stockData['is_in_stock'])
+    && isset($stockData['qty'])
+    && $orderProductQuickly > $stockData['qty'] ) :
+    ?>
+    <div class="product-full-width-section">
+        <h2 class="product-section-title"><?= $blockTitle; ?></h2>
+        <?php
+        echo 'Product almost out of stock. Order now quickly.';
+
+        ?>
+    </div>
+<?php endif; ?>

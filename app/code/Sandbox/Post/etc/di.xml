@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Sandbox\Post\Model\ResourceModel\Post\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sandbox_post</argument>
+            <argument name="resourceModel" xsi:type="string">Sandbox\Post\Model\ResourceModel\Post\Collection</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="post_grid_index_data_source" xsi:type="string">Sandbox\Post\Model\ResourceModel\Post\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <preference for="Sandbox\Post\Api\Data\PostInterface" type="Sandbox\Post\Model\Post" />
+    <preference for="Sandbox\Post\Api\Data\PostSearchResultInterface" type="Sandbox\Post\Model\PostSearchResult"/>
+    <preference for="Sandbox\Post\Api\PostRepositoryInterface" type="Sandbox\Post\Model\PostRepository" />
+</config>

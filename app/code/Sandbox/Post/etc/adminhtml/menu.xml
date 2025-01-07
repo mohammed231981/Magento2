@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sandbox_Post::manager" title="Sandbox" module="Sandbox_Post" sortOrder="10" resource="Sandbox_Post::manager"/>
+        <add id="Sandbox_Post::post_manager" title="Posts" module="Sandbox_Post" resource="Sandbox_Post::modules" sortOrder="20" parent="Sandbox_Post::manager"/>
+        <add id="Sandbox_Post::post_view" title="View" module="Sandbox_Post" sortOrder="30" parent="Sandbox_Post::post_manager" action="sandbox/post" resource="Sandbox_Post::post_view"/>
+    </menu>
+</config>
